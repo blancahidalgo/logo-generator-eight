@@ -14,11 +14,11 @@ class Svg {
   }
 
 render(){
-  return <svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="300" height="200">{this.shapeElement}{this.textElement}</svg>;
+  return `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="300" height="200"> ${this.shapeElement} ${this.textElement} svg>`
   }
 
 setTextElement(text,color) {
-this.textElement = <text x="150%" y="120%" text-anchor="middle" fill="' + color + '" font-size="50" dy=".3em">' + text + '</text>;
+  this.textElement = `<text x="150%" y="120%" text-anchor="middle" fill="${color}" font-size="50" dy=".3em">${text}</text>`;
 }
 
   setShapeElement(shape){
