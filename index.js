@@ -1,7 +1,6 @@
 // Importing: inquirer package, then importing gradeful-fs, path: index.js, svg-captcha module... + the Circle, Square and Triangle modules from lib/shapes.js
 const inquirer = require('inquirer');
 const filesystem = require('./node_modules/graceful-fs/graceful-fs.js');
-const logosvg = require('./logo.svg');
 const path = require("path");
 // const svgCaptcha = require('svg-captcha');
 
@@ -14,7 +13,7 @@ class Svg {
   }
 
 render(){
-  return `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="300" height="200"> ${this.shapeElement} ${this.textElement} svg>`
+  return `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="300" height="200"> ${this.shapeElement} ${this.textElement} <svg>`
   }
 
 setTextElement(text,color) {
@@ -29,20 +28,24 @@ setTextElement(text,color) {
 const questions = [
   {
     type: 'input',
-    name: 'text',
+    name: 'user_text',
     message: 'Enter text for the logo: Not more than 3 characters!'
   },
-
   {
     type: 'input',
-    name: 'text-color',
+    name: 'user_font_color',
     message: 'Choose a text color:',
     choices: ['red', 'blue', 'green']
   },
-
   {
     type: 'list',
-    name: 'shape',
+    name: 'user_shape_color',
+    message: 'Choose the color of the shape:',
+    choices: ['red', 'blue', 'green']
+  },
+  {
+    type: 'list',
+    name: 'user_shape_type',
     message: 'Choose a shape:',
     choices: ['circle', 'square', 'triangle']
   }
