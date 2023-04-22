@@ -1,14 +1,16 @@
 {
   "name": "logo-generator-eight",
   "version": "1.0.0",
-  "description": "",
+  "description": "## Your Task",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "",
+  "author": "blancahidalgo",
   "license": "ISC",
   "dependencies": {
+    "D": "^1.0.0",
+    "fs": "^0.0.1-security",
     "inquirer": "^8.2.4",
     "readline-sync": "^1.4.10",
     "svg-captcha": "^1.4.0",
@@ -16,5 +18,10 @@
   },
   "devDependencies": {
     "jest": "^29.5.0"
-  }
+  },
+  "directories": {
+    "example": "examples",
+    "lib": "lib"
+  },
+  "keywords": []
 }
