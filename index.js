@@ -1,29 +1,30 @@
 // Importing: inquirer package, then importing gradeful-fs, path: index.js, svg-captcha module... + the Circle, Square and Triangle modules from lib/shapes.js
 const inquirer = require('inquirer');
 const filesystem = require('./node_modules/graceful-fs/graceful-fs.js');
+const logosvg = require('./logo.svg');
+const path = require("path");
 // const svgCaptcha = require('svg-captcha');
-// const path = require("path");
 
-const { Circle, Square, Triangle } = require("..lib/shapes.js");
+const { Circle, Square, Triangle } = require("./lib/shapes.js");
 
-// class Svg {
-//   constructor(){
-//     this.textElement = '';
-//     this.shapeElement = '';
-//   }
+class Svg {
+  constructor(){
+    this.textElement = '';
+    this.shapeElement = '';
+  }
 
-// render(){
-//   return <svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="300" height="200">${this.shapeElement}${this.textElement}</svg>`;
-//   }
+render(){
+  return <svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="300" height="200">{this.shapeElement}{this.textElement}</svg>;
+  }
 
-// setTextElement(text,color) {
-// this.textElement = `<text x="150%" y="120%" text-anchor="middle" fill="' + color + '" font-size="50" dy=".3em">' + text + '</text>`;
-// }
+setTextElement(text,color) {
+this.textElement = <text x="150%" y="120%" text-anchor="middle" fill="' + color + '" font-size="50" dy=".3em">' + text + '</text>;
+}
 
-//   setShapeElement(shape){
-//   this.shapeElement = shape.render()
-//   }
-// }
+  setShapeElement(shape){
+  this.shapeElement = shape.render()
+  }
+}
 
 const questions = [
   {
