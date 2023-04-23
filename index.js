@@ -13,15 +13,15 @@ class Svg {
   }
 
 render(){
-  return `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="300" height="200"> ${this.shapeElement} ${this.textElement} <svg>`
+  return `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="300" height="200"> ${this.shapeElement} ${this.textElement} </svg>`
   }
 
 setTextElement(text,color) {
-  this.textElement = `<text x="150%" y="120%" text-anchor="middle" fill="${color}" font-size="50" dy=".3em">${text}</text>`;
+  this.textElement = `<text x="150" y="120" text-anchor="middle" fill="${color}" font-size="50">${text}</text>`;
 }
 
   setShapeElement(shape){
-  this.shapeElement = shape.render()
+  this.shapeElement = shape.render(); // `<circle, <rect, <polygon
   }
 }
 
@@ -62,20 +62,13 @@ function writeToFile(fileName, data) {
   });
 }
 
-// Async function below will prompt the user for answers
-async function init() {
-  console.log("Starting init");
-  var svgString = "";
-  var svg_file = "logo.svg";
-}
-
 const answers = inquirer.prompt(questions)
   .then((answers) => {
     // Function below will identify the text input from the user and identify whether it's a valid entry (1-3 characters) or not
     var user_text = "";
-    if (answers.text.length > 0 && answers.text.length < 4) {
+    if (answers.user_text.length > 0 && answers.user_text.length < 4) {
       // 1-3 chars, valid entry
-      user_text = answers.text;
+      user_text = answers.user_text;
     } else {
       // 0 or 4+ chars, invalid entry
       console.log("Wrong input my friend, make sure you enter between 1-3 characters for your logo, no more and no less");
@@ -85,34 +78,33 @@ const answers = inquirer.prompt(questions)
     // Starts picking uo responses from the user input in CLI --> text, font color, shape color, shape type 
     console.log("User text: [" + user_text + "]");
     //user font color
-    user_font_color = answers["text-color"];
+    user_font_color = answers["user_font_color"];
     console.log("User font color: [" + user_font_color + "]");
     //user shape color
-    user_shape_color = answers.shape;
+    user_shape_color = answers["user_shape_color"];
     console.log("User shape color: [" + user_shape_color + "]");
     //user shape type
-    user_shape_type = answers["pixel-image"];
+    user_shape_type = answers["user_shape_type"];
     console.log("User entered shape = [" + user_shape_type + "]");
 
 
     // Running a variable with if statements to identify the shape type and color selected by the user
     let user_shape;
     if (user_shape_type === "Square" || user_shape_type === "square") {
-      user_shape = new Square();
+      user_shape = new Square(user_shape_color);
       console.log("User selected Square shape");
     }
     else if (user_shape_type === "Circle" || user_shape_type === "circle") {
-      user_shape = new Circle();
+      user_shape = new Circle(user_shape_color);
       console.log("User selected Circle shape");
     }
     else if (user_shape_type === "Triangle" || user_shape_type === "triangle") {
-      user_shape = new Triangle();
+      user_shape = new Triangle(user_shape_color);
       console.log("User selected Triangle shape");
     }
     else {
       console.log("Wrong shape selection out of the options we have!");
     }
-    user_shape.setColor(user_shape_color);
 
     // Create a new Svg instance and add the shape and text elements to it
     var svg = new Svg();
@@ -126,120 +118,7 @@ const answers = inquirer.prompt(questions)
 
     console.log("Shape generation complete!");
     console.log("Writing shape to file...");
+    const svg_file = "logo.svg";
     writeToFile(svg_file, svgString);
-
-    init()
+    
   });
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// // Prompt the user for answers
-// const answers = inquirer.prompt(questions);
-
-// // Function below will identify the text input from the user and identify whether it's a valid entry (1-3 characters) or not
-// var user_text = "";
-// if (answers.text.length > 0 && answers.text.length < 4) {
-//   // 1-3 chars, valid entry
-//   user_text = answers.text;
-// } else {
-//   // 0 or 4+ chars, invalid entry
-//   console.log("Wrong input my friend, make sure you enter between 1-3 characters for your logo, no more and no less");
-//   return;
-// }
-
-// // Starts picking uo responses from the user input in CLI --> text, font color, shape color, shape type 
-// console.log("User text: [" + user_text + "]");
-// //user font color
-// user_font_color = answers["text-color"];
-// console.log("User font color: [" + user_font_color + "]");
-// //user shape color
-// user_shape_color = answers.shape;
-// console.log("User shape color: [" + user_shape_color + "]");
-// //user shape type
-// user_shape_type = answers["pixel-image"];
-// console.log("User entered shape = [" + user_shape_type + "]");
-
-
-// // Running a variable with if statements to identify the shape type and color selected by the user
-// let user_shape;
-// if (user_shape_type === "Square" || user_shape_type === "square") {
-//   user_shape = new Square();
-//   console.log("User selected Square shape");
-// }
-// else if (user_shape_type === "Circle" || user_shape_type === "circle") {
-//   user_shape = new Circle();
-//   console.log("User selected Circle shape");
-// }
-// else if (user_shape_type === "Triangle" || user_shape_type === "triangle") {
-//   user_shape = new Triangle();
-//   console.log("User selected Triangle shape");
-// }
-// else {
-//   console.log("Wrong shape selection out of the options we have!");
-// }
-// user_shape.setColor(user_shape_color);
-
-// // Create a new Svg instance and add the shape and text elements to it
-// var svg = new Svg();
-// svg.setTextElement(user_text, user_font_color);
-// svg.setShapeElement(user_shape);
-// svgString = svg.render();
-
-// //Print shape to log
-// console.log("Displaying shape:\n\n" + svgString);
-// //document.getElementById("svg_image").innerHTML = svgString;
-
-// console.log("Shape generation complete!");
-// console.log("Writing shape to file...");
-// writeToFile(svg_file, svgString);
-
-// init()
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-//   //   // Saves the SVG file to disk
-//   //   fs.writeFileSync('logo.svg', captcha.data);
-//   // });
-
