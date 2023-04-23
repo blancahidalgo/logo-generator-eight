@@ -1,14 +1,16 @@
-Object-oriented Programming: SVG Logo Maker
+OBJECT-ORIENTED PROGRAMMING - SVG LOGO MAKER: 
+
+DESCRIPTION:
 
 The application allows users to enter a number of inputs into the command line in order to generate a logo - "logo.svg" file which contains the users commands and generates as an SVG image.
 
 Table of Contents:
 
-The Challenge
-Usage Information
-Installation Process
-Built With
-License
+1. The Challenge
+2. Usage Information
+3. Installation Process
+4. Built With
+5. License
 
 OVERVIEW
 
@@ -16,28 +18,13 @@ THE CHALLENGE
 
 I've built a Node.js command-line application that takes in user inputs to generates a SVG logo and saves it as "logo.svg" file. 
 
-USER STORY 
+User Story
 
-AS a freelance web developer
-I WANT to generate a simple logo for my projects
-SO THAT I don't have to pay a graphic designer
+<img width="455" alt="Screenshot 2023-04-23 at 7 57 52 pm" src="https://user-images.githubusercontent.com/120780781/233832989-57b0adae-5866-4fa2-9184-f09e9cc5d844.png">
 
-ACEPTANCE CRITERIA 
+Acceptance Criteria
 
-GIVEN a command-line application that accepts user input
-WHEN I am prompted for text
-THEN I can enter up to three characters
-WHEN I am prompted for the text color
-THEN I can enter a color keyword (OR a hexadecimal number)
-WHEN I am prompted for a shape
-THEN I am presented with a list of shapes to choose from: circle, triangle, and square
-WHEN I am prompted for the shape's color
-THEN I can enter a color keyword (OR a hexadecimal number)
-WHEN I have entered input for all the prompts
-THEN an SVG file is created named `logo.svg`
-AND the output text "Generated logo.svg" is printed in the command line
-WHEN I open the `logo.svg` file in a browser
-THEN I am shown a 300x200 pixel image that matches the criteria I entered
+<img width="772" alt="Screenshot 2023-04-23 at 7 58 00 pm" src="https://user-images.githubusercontent.com/120780781/233833013-d2efd339-2544-403d-b774-326e6f25840f.png">
 
 USAGE INFORMATION 
 
