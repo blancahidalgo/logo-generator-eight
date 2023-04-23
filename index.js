@@ -2,7 +2,6 @@
 const inquirer = require('inquirer');
 const filesystem = require('./node_modules/graceful-fs/graceful-fs.js');
 const path = require("path");
-// const svgCaptcha = require('svg-captcha');
 
 const { Circle, Square, Triangle } = require("./lib/shapes.js");
 
@@ -75,7 +74,7 @@ const answers = inquirer.prompt(questions)
       return;
     }
 
-    // Starts picking uo responses from the user input in CLI --> text, font color, shape color, shape type 
+    // Starts picking up responses from the user input in CLI --> text, font color, shape color, shape type 
     console.log("User text: [" + user_text + "]");
     //user font color
     user_font_color = answers["user_font_color"];
@@ -114,7 +113,6 @@ const answers = inquirer.prompt(questions)
 
     //Print shape to log
     console.log("Displaying shape:\n\n" + svgString);
-    //document.getElementById("svg_image").innerHTML = svgString;
 
     console.log("Shape generation complete!");
     console.log("Writing shape to file...");
