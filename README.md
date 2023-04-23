@@ -1,4 +1,4 @@
-10 Object-oriented Programming: SVG Logo Maker
+Object-oriented Programming: SVG Logo Maker
 
 The application allows users to enter a number of inputs into the command line in order to generate a logo - "logo.svg" file which contains the users commands and generates as an SVG image.
 
@@ -54,31 +54,23 @@ YOUTUBE WALKTHROUGH VIDEO:
 
 
 
-
 SCREENSHOTS OF THE APP: 
-
-
-
-
 
 PIC 1. Command Line App 
 
-
-
-
+<img width="980" alt="Screenshot 2023-04-23 at 7 54 07 pm" src="https://user-images.githubusercontent.com/120780781/233832768-e0cb9257-354e-4824-a8f5-fc231903e9ce.png">
 
 
 PIC 2. Running tests via Jest - npm test
 
 
-
-
+<img width="379" alt="Screenshot 2023-04-23 at 7 54 50 pm" src="https://user-images.githubusercontent.com/120780781/233832815-c0531ec7-b2dd-4fea-9517-733e8e79955b.png">
 
 
 PIC 3. Example of a logo generated
 
 
-
+<img width="156" alt="Screenshot 2023-04-23 at 7 52 44 pm" src="https://user-images.githubusercontent.com/120780781/233832680-e1b6da8f-e84a-4146-9e18-e39990d1e406.png">
 
 
 INSTALLATION PROCESS
