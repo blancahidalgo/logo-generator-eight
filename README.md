@@ -34,9 +34,6 @@ USAGE INFORMATION
 4. The user will then be prompted to a number of questions in a specific order. This will run within the command line thanks to npm inquirer - the user will have to respond to every question
 5. Once completed - the app will generate a logo.svg file - and the user will be able to see a preview of this logo running the live server
 
-APP URL: 
-
-
 YOUTUBE WALKTHROUGH VIDEO:  
 
 
@@ -75,9 +72,9 @@ INSTALLATION PROCESS
 BUILT WITH 
 
 1. JavaScript
-2. Node.js Version 
-3. Jest Version 
-4. Inquirer.js: Version 
+2. Node.js  
+3. Jest  
+4. Inquirer.js:  
 5. Visual Studio Code: Website
 
 LICENCE - MIT 
