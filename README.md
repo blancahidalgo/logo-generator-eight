@@ -34,9 +34,9 @@ USAGE INFORMATION
 4. The user will then be prompted to a number of questions in a specific order. This will run within the command line thanks to npm inquirer - the user will have to respond to every question
 5. Once completed - the app will generate a logo.svg file - and the user will be able to see a preview of this logo running the live server
 
-YOUTUBE WALKTHROUGH VIDEO:  
+LOOM WALKTHROUGH VIDEO:  
 
-
+https://www.loom.com/share/8b0d3a49f48b433ca4f0478df319765c
 
 SCREENSHOTS OF THE APP: 
 
