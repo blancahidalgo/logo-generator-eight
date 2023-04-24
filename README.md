@@ -36,7 +36,7 @@ USAGE INFORMATION
 
 SCREENCASTIFY WALKTHROUGH VIDEO:  
 
-https://drive.google.com/file/d/1PG6K-5A4-n6t2ErkFJLTm8Fz7MgX2dDu/viewSCREENSHOTS 
+https://drive.google.com/file/d/1PG6K-5A4-n6t2ErkFJLTm8Fz7MgX2dDu/view
 
 SCREENSHOTS OF THE APP: 
 
